@@ -8,7 +8,7 @@ class LivroController extends Controller
 {
     public function index(Request $request){
     $Livros = Livro::all();
-        return view('Livro.Index', compact('livros'));
+        return view('livro.index', compact('livros'));
 }
 public function create(){
     return view('livros.create');
@@ -24,6 +24,6 @@ public function store (Request $request){
     
     Livro::create($request->all());
 
-    return redirect ()->route('Livro.index')->with('sucess','Registro criado com sucesso');
+    return redirect ()->route('livro.index')->with('sucess','Registro criado com sucesso');
 }
 }

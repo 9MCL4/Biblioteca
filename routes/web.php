@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controlers\LivroControler;
+
+
 Route::get('/', function () {
     return view('welcome');
 });
